@@ -1,0 +1,484 @@
+/********** Template CSS **********/
+:root {
+    --primary: #007bff;
+    --secondary: #FFC448;
+    --light: #FAFAFB;
+    --dark: #12141D;
+}
+
+.backToTop {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.navbar.fixed-top {
+    display: none;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 20px 15px;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        padding: 10px 0;
+    }
+}
+
+
+/*** Header ***/
+#home {
+    margin-bottom: 6rem;
+    background: url(../img/bg-header.png) left top no-repeat;
+}
+
+.typed-cursor {
+    font-size: 30px;
+    color: var(--dark);
+}
+
+
+
+/*** Skills ***/
+#skill .progress {
+    height: 5px;
+    border-radius: 5px;
+}
+
+#skill .progress .progress-bar {
+    width: 0px;
+    border-radius: 5px;
+    transition: 3s;
+}
+
+#skill .nav-pills .nav-link {
+    color: var(--dark);
+}
+
+#skill .nav-pills .nav-link.active {
+    color: #FFFFFF;
+}
+
+#skill .tab-content hr {
+    width: 30px;
+}
+
+
+/* accordion */
+.accordion {
+    cursor: pointer;
+    color: #444;
+    font-size: 20px;
+    transition: 0.4s;
+    background-color: #eee;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.activeAcc, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* ICONS */
+.accordion:after {
+    content: '\002b';
+    font-size: 20px;
+    color: #007bff;
+    float: right;
+    margin-left: 5px;
+    font-weight: bold;
+    
+}
+
+.activeAcc:after {
+    content: '\2212';
+    
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    background-color: #fff;
+    overflow: hidden;
+    transition:  max-height 0.2s ease-out;
+    width: 100%;
+}
+
+/* *******************skils and accordion ends******************* */
+
+/* *******************about styles********************** */
+.about-section {
+    margin-top: 100px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+-ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+}
+.about-img-holda {
+    min-width: 400px;
+    max-width: 400px;
+    margin-top: -50px;
+    padding:60px 80px;
+}
+
+.about-img-holda .about-img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.about-caption {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.about-caption span {
+    color: #3498db;
+    font-size: 20px;
+}
+
+.about-section .section-title {
+  font-size: calc(20px + (35 - 20) * ((90vw - 150px) / (1300 - 300)));
+}
+@media (max-width: 767.98px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+   
+  }
+  .about-img-holder {
+    max-width: 220px;
+    min-width: 100%;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/* *******************about styles ends********************** */
+
+
+/* *****services styles start******* */
+
+.img1 {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 25px;
+}
+
+
+/* *****services styles end******* */
+
+
+
+/*** Project Portfolio ***/
+#portfolio-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.portfolio-img {
+    position: relative;
+}
+
+.portfolio-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: 	rgb(0, 123, 255, .6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 30px;
+    padding-bottom: 100px !important;
+    opacity: 0;
+    transition: .5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+    opacity: 1;
+    padding-bottom: 30px !important;
+}
+
+
+
+/*** Testimonial ***/
+.client_section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+    margin: auto;
+    
+}
+
+.test {
+    text-align: center;
+    margin: auto;
+}
+
+.client_section .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 35px 25px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+.client_section .box .img-box img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin:20px;
+}
+
+.client_section .box .detail-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.client_section .box .detail-box .name {
+  text-align: center;
+}
+
+.client_section .box .detail-box .name img {
+  width: 25px;
+  margin-bottom: 5px;
+}
+
+.client_section .box .detail-box .name h6 {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.client_section .carousel_btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+    
+}
+
+.client_section .carousel-control-prev,
+.client_section .carousel-control-next {
+  position: unset;
+  width: 45px;
+  height: 45px;
+  border: none;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: center;
+  background-color: #007bff;
+  background-position: center;
+  border-radius: 100%;
+  margin: 0 2.5px;
+}
+
+.client_section .carousel-control-prev:hover,
+.client_section .carousel-control-next:hover {
+  background-color: #000000;
+}
+
+.client_section .carousel-control-next {
+  left: initial;
+}
+
+@media(max-width:768px){
+    .client_section .box {
+    flex-direction: column;
+    text-align: center;
+    margin: 45px 15px;
+  }
+
+  .test {
+    margin: auto;
+  }
+
+  .client_section .box .detail-box {
+    align-items: center;
+  }
+
+  .client_section .box .img-box {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+
+   
+}
+
+/* ****Testimonial ends**** */
+/* *********footer*********** */
+
+/* Footer Styles */
+/* footer {
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+
+} */
+
+ .site-footer {
+    margin: auto;
+    margin-top: 100px; 
+    text-align: center; 
+    font-weight: 600; 
+    color: #000; 
+    font-size: 30px; 
+    font-size: 0.9375rem; 
+    } 
+.copy {
+    margin-bottom: 20px;
+}
+
+ 
+.company-info span { 
+    border-right: 1px solid #a1a1a1; 
+    display: inline-block; 
+    padding: 0 10px; 
+    line-height: 20px; 
+    } 
+
+
+@media screen and (max-width: 600px) {
+  .navbar-nav a {
+    text-align: center;
+  }
+  .navbar-nav a {
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+  }
+
+  .navbar-nav {
+    border-top: 1px solid #EAEAEB;
+    margin-top: 5px;
+}
+
+}
