@@ -442,6 +442,7 @@
 
 .ico-fb {
     background-color: #316FF6;
+    border: #316FF6;
 }
 
 .ico-whatsapp {
@@ -451,6 +452,7 @@
 
 .ico-linkedin {
     background-color: #0077B5;
+    border: #0077B5;
 }
 
 .ico-github:hover {
